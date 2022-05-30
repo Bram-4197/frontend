@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+.App{
+    background-color: #2d2c2a;
+	font-family: "Muli";
+}
+
+
+table {
+	width: 75%;
+	border-collapse: collapse;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(255,215,0, 1);
+}
+
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+    padding: 15px;
+	color: #fff;
+	text-align: left;
+}
+/* tr:hover {
+	background-color: rgba(255,255,255,0.1)
+} */
+
+.footer{
+    height: 120px;
+}
+
+.SideBarimge{
+	background-image: url("https://images.unsplash.com/photo-1554581601-533131774e36?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740");
+	background-size: auto;
+	box-shadow:  0 0 20px rgba(255, 255, 255, 0.50);;
+}
+
+
+.refresh-button{
+	position: absolute;
+	margin-left: 60%;
+}
+
