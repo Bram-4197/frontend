@@ -11,15 +11,15 @@ import "../App.css"
 
 function SideBar() {
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(() => {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      return false
+     }
+    else{
+      return true
+    }
+  });
 
-  useEffect(() => {
-    setInterval(() => {
-      if (window.innerWidth <= 700){
-        setOpen(false);
-      }
-    }, 1000)
-  }, [])
   return (
     <div>
         <div className={`${open ? 'w-72' : "w-20"} 
@@ -29,7 +29,7 @@ function SideBar() {
           bg-white  border-stone-600 ${!open && "rotate-180"}`}
 
           onClick={() => {
-            if(window.innerWidth <=  700){
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             }
             else{
               setOpen(!open)
